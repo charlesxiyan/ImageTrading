@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Trained models (large binary files)
+*.tar
+*.pt
+*.pth
+models/
+
+# Training logs
+logs/
+*.csv
+
+# Generated pixel image datasets (can be very large)
+*.pkl
+
+# TensorBoard runs
+tensorboard/
+runs/
+
+# Test / inference output
+TestOutcome/
+TrainAllOutcome/
+factors/
+
+# Factor cache files
+*.f
+*.NI
+*.N128C
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
