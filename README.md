@@ -1,6 +1,6 @@
 # ImageTrading
 
-A CNN-based stock price trend prediction framework for Chinese A-share markets, inspired by the paper **(Re-)Imag(in)ing Price Trends** and the work at [charlesxiyan/CNN-for-Trading](https://github.com/charlesxiyan/CNN-for-Trading).
+A CNN-based stock price trend prediction framework for Chinese A-share markets, inspired by the paper **(Re-)Imag(in)ing Price Trends** and the work at [RichardS0268/CNN-for-Trading](https://github.com/RichardS0268/CNN-for-Trading).
 
 The core idea is to encode intraday OHLCV price data as 2D grayscale pixel images and train a convolutional neural network to classify future price direction (up/down).
 
@@ -167,4 +167,4 @@ The `Testing` class loads a trained model and runs inference over the full stock
 This project was developed during an internship and is inspired by:
 
 - Paper: **(Re-)Imag(in)ing Price Trends** — which demonstrates that CNNs applied to raw price images can learn meaningful predictive signals for stock returns
-- Repository: [charlesxiyan/CNN-for-Trading](https://github.com/charlesxiyan/CNN-for-Trading)
+- Repository: [RichardS0268/CNN-for-Trading](https://github.com/RichardS0268/CNN-for-Trading)
