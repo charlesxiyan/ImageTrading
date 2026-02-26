@@ -164,7 +164,7 @@ The `Testing` class loads a trained model and runs inference over the full stock
 
 ## Acknowledgements
 
-This project was developed during an internship and is inspired by:
+This project is inspired by:
 
 - Paper: **(Re-)Imag(in)ing Price Trends** — which demonstrates that CNNs applied to raw price images can learn meaningful predictive signals for stock returns
 - Repository: [RichardS0268/CNN-for-Trading](https://github.com/RichardS0268/CNN-for-Trading)
