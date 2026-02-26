@@ -9,6 +9,18 @@ DATASET:
   SAMPLE_RATE: 0.2
   SHOW_VOLUME: false
   START_DATE: 20211101
+DATA_FILES:
+  OPEN: path/to/open_data
+  HIGH: path/to/high_data
+  LOW: path/to/low_data
+  CLOSE: path/to/close_data
+  VOLUME: path/to/volume_data
+  ASHARE_FILTER: path/to/ashare_filter
+  ADJ_FACTOR: path/to/adj_factor
+  UP_LIMIT: path/to/up_limit
+  DN_LIMIT: path/to/dn_limit
+  TRADE_DATES: path/to/trade_dates
+  UNIVERSE_UID: path/to/universe_uid
 INFERENCE:
   END_DATE: 20230630
   FACTORS_SAVE_FILE: /path/to/factors/I49R50_OHLC/I49R50_OHLC_2101-2306_Ed_1_0_0.csv

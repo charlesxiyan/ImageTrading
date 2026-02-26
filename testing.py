@@ -64,8 +64,8 @@ class Testing(ins.InitialSetting, CNN49u, CNN9u):
 
         # Condition the shape of the output
         self.commoncache_dir = self.config.PATHS.COMMONCACHE_DIR
-        self.tradedays_dir = os.path.join(self.commoncache_dir, '__universe/dates.NI')
-        self.uid_dir = os.path.join(self.commoncache_dir, '__universe/uid.N128C')
+        self.tradedays_dir = os.path.join(self.commoncache_dir, self.config.DATA_FILES.TRADE_DATES)
+        self.uid_dir = os.path.join(self.commoncache_dir, self.config.DATA_FILES.UNIVERSE_UID)
 
         self.no_interval = int(re.search(r'\d+', self.config.MODEL).group())
         self.n_shift = self.config.TRAIN.PREDICT_WIN + 1

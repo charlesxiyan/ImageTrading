@@ -81,6 +81,19 @@ PATHS:
   IMAGE_DATA_DIR:  /path/to/image/data       # Where generated pixel images are saved
   PROJECT_DIR:     /path/to/project/output   # Root for TensorBoard logs and test outcomes
 
+DATA_FILES:
+  OPEN:          path/to/open_data           # Memory-mapped intraday open price file
+  HIGH:          path/to/high_data
+  LOW:           path/to/low_data
+  CLOSE:         path/to/close_data
+  VOLUME:        path/to/volume_data
+  ASHARE_FILTER: path/to/ashare_filter       # A-share tradability filter
+  ADJ_FACTOR:    path/to/adj_factor          # Forward adjustment factor
+  UP_LIMIT:      path/to/up_limit            # Daily price limit-up file
+  DN_LIMIT:      path/to/dn_limit            # Daily price limit-down file
+  TRADE_DATES:   path/to/trade_dates         # Trading calendar
+  UNIVERSE_UID:  path/to/universe_uid        # Stock universe identifiers
+
 DATASET:
   LOOKBACK_WIN: 49     # Number of bars per image (9 or 49)
   START_DATE: 20211101

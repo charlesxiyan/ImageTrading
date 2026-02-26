@@ -16,19 +16,20 @@ class Data():
         self.infer_start = self.preset.config.INFERENCE.START_DATE
         self.infer_end = self.preset.config.INFERENCE.END_DATE
 
-        self.Open_dir = os.path.join(self.commoncache_dir, 'IntervalFull/IntervalFull.open.N49,5184f')
-        self.High_dir = os.path.join(self.commoncache_dir, 'IntervalFull/IntervalFull.high.N49,5184f')
-        self.Low_dir = os.path.join(self.commoncache_dir, 'IntervalFull/IntervalFull.low.N49,5184f')
-        self.Close_dir = os.path.join(self.commoncache_dir, 'IntervalFull/IntervalFull.close.N49,5184f')
-        self.Volume_dir = os.path.join(self.commoncache_dir, 'IntervalFull/IntervalFull.volume.N49,5184f')
+        files = self.preset.config.DATA_FILES
+        self.Open_dir = os.path.join(self.commoncache_dir, files.OPEN)
+        self.High_dir = os.path.join(self.commoncache_dir, files.HIGH)
+        self.Low_dir = os.path.join(self.commoncache_dir, files.LOW)
+        self.Close_dir = os.path.join(self.commoncache_dir, files.CLOSE)
+        self.Volume_dir = os.path.join(self.commoncache_dir, files.VOLUME)
 
-        self.AShareNST_dir = os.path.join(self.commoncache_dir, 'AShareNST/AShareNST.N,5184c')
-        self.Adjust_dir = os.path.join(self.commoncache_dir, 'ForwardAdjPrices/ForwardAdjPrices.S_DQ_ADJFACTOR.N,5184f')
-        self.UpLim_dir = os.path.join(self.commoncache_dir, 'Limits/UplimPrice.N,5184f')
-        self.DnLim_dir = os.path.join(self.commoncache_dir, 'Limits/DnlimPrice.N,5184f')
+        self.AShareNST_dir = os.path.join(self.commoncache_dir, files.ASHARE_FILTER)
+        self.Adjust_dir = os.path.join(self.commoncache_dir, files.ADJ_FACTOR)
+        self.UpLim_dir = os.path.join(self.commoncache_dir, files.UP_LIMIT)
+        self.DnLim_dir = os.path.join(self.commoncache_dir, files.DN_LIMIT)
 
-        self.tradedays_dir = os.path.join(self.commoncache_dir, '_universe/dates.NI')
-        self.uid_dir = os.path.join(self.commoncache_dir, '_universe/uid.N128C')
+        self.tradedays_dir = os.path.join(self.commoncache_dir, files.TRADE_DATES)
+        self.uid_dir = os.path.join(self.commoncache_dir, files.UNIVERSE_UID)
 
         self.tradeday = np.memmap(self.tradedays_dir, mode = 'r', dtype = self.dtype_map(self.tradedays_dir[-1]))
         self.allday_len = len(self.tradeday)
@@ -129,8 +130,6 @@ class Imaging(Data):
         self.left = ['Vwap']
         self.support_indicator = []
         self.save_img_dir = setting.PATHS.IMAGE_DATA_DIR
-        
-        # self.raw_data_directory = '/dfs/data/Project/data/SparkData/df/Train_().().Test_().().Infer_().().format(setting.TRAIN_START_DATE, setting.TRAIN_END_DATE, setting.TEST_START_DATE, setting.TEST_END_DATE, setting_INFERENCE_START_DATE, setting_INFERENCE_END_DATE)
         
         # For use of day number calculation
         if freq == '5min':

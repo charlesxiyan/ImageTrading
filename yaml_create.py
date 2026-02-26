@@ -21,6 +21,20 @@ yml = {
     'PROJECT_DIR': '/path/to/project/output',
   },
 
+  'DATA_FILES': {
+    'OPEN':          'path/to/open_data',
+    'HIGH':          'path/to/high_data',
+    'LOW':           'path/to/low_data',
+    'CLOSE':         'path/to/close_data',
+    'VOLUME':        'path/to/volume_data',
+    'ASHARE_FILTER': 'path/to/ashare_filter',
+    'ADJ_FACTOR':    'path/to/adj_factor',
+    'UP_LIMIT':      'path/to/up_limit',
+    'DN_LIMIT':      'path/to/dn_limit',
+    'TRADE_DATES':   'path/to/trade_dates',
+    'UNIVERSE_UID':  'path/to/universe_uid',
+  },
+
   'TRAIN':{
     'PREDICT_WIN': 50,
     'LABEL': 'RET_LONG',
